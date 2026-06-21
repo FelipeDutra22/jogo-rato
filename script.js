@@ -30,7 +30,7 @@ const jump = () => {
     rat.classList.add('jump');
     jumpCount++;
     jumpCountDisplay.textContent = jumpCount;
-    setTimeout(() => { rat.classList.remove('jump'); }, 500);
+    setTimeout(() => { rat.classList.remove('jump'); }, 700);
 };
 
 const createLoop = () => {
