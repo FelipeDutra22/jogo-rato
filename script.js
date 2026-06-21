@@ -39,7 +39,7 @@ const createLoop = () => {
         const ratPosition = +window.getComputedStyle(rat).bottom.replace('px', '');
         const cloudPosition = +window.getComputedStyle(cloud).left.replace('px', '');
 
-        if (cactoPosition <= 100 && cactoPosition > 0 && ratPosition < 110) {
+        if (cactoPosition <= 100 && cactoPosition > 0 && ratPosition < 80) {
             cacto.style.animation = 'none';
             cacto.style.left = `${cactoPosition}px`;
 
