@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url('img/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-image: url('img/sand.png');
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+}
+
+.cacto {
+    position: absolute;
+    bottom: 50px;
+    width: 100px;
+    animation: cacto-animation 1.5s infinite linear;
+}
+
+.rat {
+    width: 130px;
+    position: absolute;
+    bottom: 50px;
+}
+
+.jump {
+    animation: jump-animation 500ms ease-out;
+}
+
+.cloud {
+    width: 500px;
+    position: absolute;
+    top: 40px;
+    animation: cloud-animation 20s infinite linear;
+}
+
+.timer-display {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-family: monospace;
+    font-size: 18px;
+    padding: 4px 12px;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.jump-display {
+    position: absolute;
+    top: 50px;
+    right: 16px;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-family: monospace;
+    font-size: 18px;
+    padding: 4px 12px;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.game-over {
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(65, 57, 57, 0.363);
+}
+
+.game-over-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.final-time {
+    color: #fff;
+    font-family: monospace;
+    font-size: 22px;
+    background: rgba(0,0,0,0.5);
+    padding: 6px 18px;
+    border-radius: 8px;
+}
+
+.restart {
+    height: 60px;
+    width: 350px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+}
+
+@keyframes cacto-animation {
+    from { right: -80px; }
+    to   { right: 100%; }
+}
+
+@keyframes jump-animation {
+    0%   { bottom: 50px; }
+    40%  { bottom: 220px; }
+    50%  { bottom: 220px; }
+    60%  { bottom: 220px; }
+    100% { bottom: 50px; }
+}
+
+@keyframes cloud-animation {
+    from { right: -550px; }
+    to   { right: 100%; }
+}
+
+@media (max-width: 620px) {
+    .rat {
+        width: 110px;
+        bottom: 50px;
+    }
+
+    .cacto {
+        width: 50px;
+        bottom: 50px;
+        animation: cacto-animation 1s infinite linear;
+    }
+}

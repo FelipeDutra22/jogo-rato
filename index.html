@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Rato</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="game-board">
+        <img src="img/cloud.png" class="cloud">
+        <img src="img/rat.gif" class="rat">
+        <img src="img/cacto.png" class="cacto">
+        <div class="ground"></div>
+        <div class="timer-display">⏱ <span id="timer">0.0s</span></div>
+        <div class="jump-display">🦘 Pulos: <span id="jump-count">0</span></div>
+    </div>
+
+    <div class="game-over">
+        <div class="game-over-box">
+            <p class="final-time">Tempo: <span id="final-time">0.0s</span></p>
+            <button class="restart">REINICIAR</button>
+        </div>
+    </div>
+
+</body>
+</html>
